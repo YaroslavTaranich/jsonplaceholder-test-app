@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+
+import './App.css'
+import Images from './components/images'
+import Posts from './components/posts'
+import Users from './components/users'
 
 function App() {
+  const [page, setPage] = useState('image')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main className="App">
+      <h1>Test App</h1>
+      <button type="button" onClick={() => setPage('image')}>
+        IMAGE
+      </button>
+      <button type="button" onClick={() => setPage('users')}>
+        USERS
+      </button>
+      <button type="button" onClick={() => setPage('posts')}>
+        POSTS
+      </button>
+      {page === 'image' && <Images />}
+      {page === 'users' && <Users />}
+      {page === 'posts' && <Posts />}
+    </main>
+  )
 }
 
-export default App;
+export default App
