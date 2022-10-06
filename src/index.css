@@ -5,9 +5,44 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(75deg, rgb(20, 0, 105), rgb(92, 0, 106), rgb(163, 0, 0));
+  /* background-attachment: fixed; */
+  background-size: 200%;
+  animation: BGmove 7s ease infinite;
+  min-height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+@keyframes BGmove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  20% {
+    background-position: 50% 60%;
+  }
+
+  40% {
+    background-position: 30% 30%;
+  }
+
+  60% {
+    background-position: 80% 0%;
+  }
+
+  80% {
+    background-position: 20% 30%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }

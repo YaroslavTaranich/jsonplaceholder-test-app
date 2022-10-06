@@ -1,0 +1,84 @@
+.todos {
+    max-width: 100%;
+    width: 1000px;
+    margin: 20px auto;
+}
+
+.authtor {
+    display: flex;
+    align-items: center;
+    /* width: 150px; */
+    margin-right: 20px;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.add_todo {
+    display: flex;
+}
+
+.add_todo input {
+    width: 80%;
+    padding: 15px 10px;
+    font-size: 2rem;
+}
+
+.add_todo button {
+    width: 20%;
+    background-color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.todo_list {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    background-color: wheat
+}
+
+.todo {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.295);
+}
+
+.complited {
+    text-decoration: line-through;
+}
+
+.todo button {
+    margin-left: auto;
+    background-color: rgb(196, 2, 2);
+    color: white;
+    padding: 5px 15px;
+    font-size: 1rem;
+}
+
+.pagination {
+    display: flex;
+    margin-top: 10px;
+}
+
+.next {
+    margin-left: auto;
+}
+
+.prev {
+    margin-right: auto;
+}
+
+.next,
+.prev {
+    padding: 5px 20px;
+    background-color: rgb(201, 255, 39);
+    font-size: 1.3rem;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}

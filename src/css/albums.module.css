@@ -1,0 +1,146 @@
+.list {
+    list-style: none;
+    margin: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.album {
+    color: wheat;
+    padding: 10px 20px;
+    background-color: rgb(6, 115, 162);
+    border-radius: 12px;
+    box-shadow: inset 0 0 10px 3px rgb(142, 207, 253);
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 20px 0;
+    text-align: right;
+}
+
+.album_title {
+    text-align: center;
+    color: rgb(83, 11, 11);
+    font-size: 2rem;
+}
+
+.preview {
+    max-height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    transition: all .4s;
+}
+
+.preview img {
+    width: 100px;
+    height: 100px;
+}
+
+.show {
+    max-height: 1000px;
+
+}
+
+.full {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    transition: all .4s;
+    max-height: 1000px;
+    overflow: visible;
+}
+
+.full img {
+    width: 55px;
+    height: 55px;
+}
+
+.button {
+    margin: 15px auto 5px;
+    display: block;
+    padding: 5px 20px;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    background-color: wheat;
+    color: rgb(6, 115, 162);
+    font-weight: bold;
+    transition: all .2s;
+}
+
+.button:hover,
+.button:focus {
+    box-shadow: inset 0 0 10px rgb(180, 63, 186)
+}
+
+.user_albums {
+    max-width: 100%;
+    width: 1000px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: wheat;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.img_button {
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    border: none;
+    outline: none;
+    transition: all .2s;
+}
+
+.img_button:hover,
+.img_button:focus {
+    box-shadow: 0 0 20px 10px rgb(188, 237, 255);
+
+    transform: scale(1.2)
+}
+
+.photo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
+.photo img {
+    max-width: 80%
+}
+
+.galery p {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: blueviolet;
+    color: wheat;
+    border-radius: 6px;
+    max-width: 600px;
+    box-sizing: border-box;
+    margin: 5px auto 25px;
+
+}
+
+.controls {
+    padding: 0;
+    margin: 0;
+    line-height: 0rem;
+    border: none;
+    outline: none;
+    font-size: 5rem;
+    color: wheat;
+    transition: all .2s;
+    filter: drop-shadow(2px 4px 5px rgb(95, 88, 98));
+}
+
+.controls:hover,
+.controls:focus {
+    filter: drop-shadow(2px 4px 5px rgb(166, 0, 255));
+}

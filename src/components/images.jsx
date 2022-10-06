@@ -1,8 +1,10 @@
 import withData from '../HOC/withData'
 
+import Spinner from './UI/spinner/spinner'
+
 function Images({ data, status, error }) {
   if (status === 'error') return <h1> ERROR! {error}</h1>
-  if (status === 'loading') return <h1>LOADING!</h1>
+  if (status === 'loading') return <Spinner />
 
   return (
     <section className="images">

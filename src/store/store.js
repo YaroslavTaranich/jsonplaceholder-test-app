@@ -1,13 +1,21 @@
-import { applyMiddleware, combineReducers, createStore, compose } from 'redux'
-import { composeWithDevTools } from 'redux-devtools-extension'
-import thunk from 'redux-thunk'
+import { configureStore } from '@reduxjs/toolkit'
 
-import { pageReduser, postsReduser } from './redusers'
+import { reducer as todosReduser } from './TodosSlice'
+import usersReduser from './usersSlice'
+import commentsReduser from './commentsSlice'
+import postsReduser from './postsSlice'
+import albumsReducer from './albumsSlice'
+import photosReduser from './photosSlice'
 
-const composedEnhancer = compose(applyMiddleware(thunk), composeWithDevTools())
-
-const rootReduser = combineReducers({ posts: postsReduser, page: pageReduser })
-
-const store = createStore(rootReduser, composedEnhancer)
+const store = configureStore({
+  reducer: {
+    posts: postsReduser,
+    users: usersReduser,
+    comments: commentsReduser,
+    todos: todosReduser,
+    albums: albumsReducer,
+    photos: photosReduser,
+  },
+})
 
 export default store

@@ -1,11 +1,13 @@
 const ADD_MORE_POSTS = 'ADD_MORE_POSTS'
 const SET_ERROR = 'SET_ERROR'
 const SET_STATUS = 'SET_STATUS'
+const SET_PAGE = 'SET_PAGE'
 
 const initialState = {
   data: [],
   error: null,
   status: 'loading',
+  page: 1,
 }
 
 // eslint-disable-next-line default-param-last
@@ -17,6 +19,8 @@ export const postsReduser = (state = initialState, action) => {
       return { ...state, error: action.payload, status: 'error' }
     case SET_STATUS:
       return { ...state, status: action.payload }
+    case SET_PAGE:
+      return { ...state, page: action.payload }
     default:
       return state
   }
@@ -50,8 +54,6 @@ export const getpostsByPage = (page) =>
 
 export const selectPosts = (state) => state.posts
 
-const SET_PAGE = 'SET_PAGE'
-
 // eslint-disable-next-line default-param-last
 export const pageReduser = (state = 1, action) => {
   switch (action.type) {
@@ -63,4 +65,4 @@ export const pageReduser = (state = 1, action) => {
 }
 
 export const setPage = (page) => ({ type: SET_PAGE, payload: page })
-export const getPage = (state) => state.page
+export const getPage = (state) => state.posts.page
