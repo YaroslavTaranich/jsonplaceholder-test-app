@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router'
+import { Link } from 'react-router-dom'
 
 function Header() {
   const navigate = useNavigate()
 
   return (
     <header className="app-header">
-      <h1>Test App</h1>
+      <Link to="/">Test App</Link>
       <button type="button" onClick={() => navigate('image')}>
         IMAGE
       </button>

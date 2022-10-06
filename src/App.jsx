@@ -13,6 +13,7 @@ import UsersPage from './components/usersPage'
 import UserPage from './components/userPage'
 import { getPostsByPage, postsSelectpors } from './store/postsSlice'
 import UserAlbumsPage from './components/UserAlbumsPage'
+import ErrorPage from './components/ErrorPage'
 
 function App() {
   const dispatch = useDispatch()
@@ -36,7 +37,10 @@ function App() {
             <Route index element={<UserPage />} />
             <Route path="albums" element={<UserAlbumsPage />} />
           </Route>
+          <Route path="*" element={<ErrorPage />} />
         </Route>
+        <Route path="error" element={<ErrorPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
   )

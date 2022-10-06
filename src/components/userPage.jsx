@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from 'react-router'
+import { Navigate, useNavigate, useParams } from 'react-router'
 import { useSelector } from 'react-redux'
 import { useState } from 'react'
 
@@ -9,7 +9,6 @@ import styles from '../css/users.module.css'
 import AllUserInfo from './allUserIfo'
 import Posts from './posts'
 import AlbulsList from './albums'
-import Spinner from './UI/spinner/spinner'
 import UserTodos from './userTodos'
 
 function UserPage() {
@@ -22,7 +21,7 @@ function UserPage() {
 
   const actionCreator = (page) => getPostsByUserId({ page, userId: id })
 
-  if (!user) return <Spinner />
+  if (!user) return <Navigate to="/error" />
 
   return (
     <section className={styles.users}>
